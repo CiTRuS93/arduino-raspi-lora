@@ -5,4 +5,4 @@ with LoRa connection we can transfer data from all the feather's sensors to the 
 the raspberry pi build as a thread per task server.
 
 ![GitHub Logo](https://raw.githubusercontent.com/CiTRuS93/arduino-raspi-lora/master/architecture.png)
-Format: ![Alt Text](url)
+
