@@ -6,8 +6,10 @@ import queue
 import encoder
 import requests
 import Threading_Lora_Raspi
+import aws_connect_and_send
+
 cid = '212' #defualt crane id for testing
-srurl = "http://a.pushtheb.com"  # server url
+srurl = "old server url"  # server url
 
 
 thread_num = 5
@@ -61,13 +63,17 @@ def process_packet(threadID,packet):
 actors =[]
 
 
-#send message to server using http requests
+#send message to the old server server using http requests and sending to the new aws using mqtt
 def message_to_server(packet):
     print(packet)
+    
+    msg = {'MessageKind': 'wind', 'WindS': packet.data, 'WindMX': packet.data,
+                                'WindMI': packet.data, 'MachineId': cid, 'Index': 2, 'Date': packet.received}
     try:
+        #sending http POST to the old server
         r = requests.post(srurl + "/api/SmsR",
-                          data={'MessageKind': 'wind', 'WindS': packet.data, 'WindMX': packet.data,
-                                'WindMI': packet.data, 'MachineId': cid, 'Index': 2, 'Date': packet.received})
+                          data=msg)
+        aws_connect_and_send.publish(msg)
         print('done!')
         print(r.status_code, r.reason)
         # os.remove(directory + "//" + filename)
