@@ -68,13 +68,13 @@ the raspberry pi build as a thread per task server.
 * [Getting Started](#getting-started)
   * [Connections](#connections)
   * [Prerequisites](#prerequisites)
+    * [Raspberry pi](#raspberry-pi)
+    * [Feather](#feather)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
+     * [Raspberry pi](#raspberry-pi)
+     * [Feather](#feather
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 
 
@@ -105,7 +105,7 @@ To get a local copy up and running follow these simple steps.
 
 #### Raspberry pi
 * enable SPI using `sudo raspi-config`>Interfacing Options>SPI
-#### feather
+#### Feather
 * arduino IDE
 
 
@@ -116,7 +116,7 @@ To get a local copy up and running follow these simple steps.
 git clone https://github.com/CiTRuS93/arduino-raspi-lora.git
 
 ```
-2. Install NPM packages
+2. 
 ```sh
 cd raspberry-pi
   pip install -r requirements.txt
