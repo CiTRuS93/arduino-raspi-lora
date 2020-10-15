@@ -72,7 +72,7 @@ the raspberry pi build as a thread per task server.
     * [Feather](#feather)
   * [Installation](#installation)
      * [Raspberry pi](#raspberry-pi)
-     * [Feather](#feather
+     * [Feather](#feather)
 * [Contact](#contact)
 
 
