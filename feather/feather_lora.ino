@@ -85,7 +85,7 @@ void loop() {
       }
     }
 
-    //
+    //replace with your own sensors
       mesure =(analogRead(SENSOR_PIN));
       mesure=mesure*60;
       mesure=mesure/1024;
